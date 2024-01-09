@@ -1,0 +1,147 @@
+:root,
+html[data-theme='light'] {
+	--text: #180202;
+	--background: #fafafa;
+	--primary: #ff6d4d;
+	--secondary: #e6e6e5;
+	--accent: #d12600;
+
+	--textP: #312727;
+	--buttont: #fde7e7;
+	--translucido: rgb(0, 0, 0, 0);
+}
+html[data-theme='dark'] {
+	--text: #fde7e7;
+	--background: #050505;
+	--primary: #b32100;
+	--secondary: #1a1a19;
+	--accent: #ff542e;
+
+	--textP: #c3c6d3;
+	--buttont: #fde7e7;
+}
+
+* {
+	box-sizing: border-box;
+
+	margin: 0;
+
+	color: var(--text);
+}
+
+html,
+body {
+	max-width: 100vw;
+	background-color: var(--background);
+	position: relative;
+	font-family: 'MerriweatherSans', sans-serif;
+}
+
+li {
+	text-align: left;
+}
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 2rem;
+	text-wrap: balance;
+}
+h2 {
+	font-size: 1.5rem;
+	text-wrap: balance;
+}
+
+p {
+	color: var(--textP);
+	text-wrap: balance;
+	font-weight: 500;
+	max-width: 900px;
+}
+
+span {
+	color: var(--accent);
+}
+
+img {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	height: auto;
+	display: block;
+	animation: opacityanim 1s;
+}
+
+section {
+	padding: 50px 0 50px 0;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+section:nth-child(1) {
+	padding-top: 70px;
+}
+
+section:only-child {
+	padding-top: 200px;
+}
+
+section:last-child {
+	padding-bottom: 200px;
+}
+
+input {
+	transition: ease all 0.6s;
+}
+
+input:disabled {
+	pointer-events: none;
+	cursor: not-allowed;
+	background-color: gainsboro;
+}
+
+button:disabled {
+	background-color: gainsboro;
+	pointer-events: none;
+	cursor: not-allowed;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 70px;
+	padding: 10px;
+
+	background: var(--secondary);
+	transition: background-color ease 0.3s;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+	box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.25);
+	padding: 1rem;
+	max-width: none;
+	background-color: var(--primary);
+	color: var(--buttont);
+}
+
+footer p,
+footer a,
+footer i,
+footer h2 {
+	color: var(--buttont);
+}
+
